@@ -1,0 +1,11 @@
+version=3
+
+#Offical release url path
+http://sf.net/lxde/lxmusic-(.*)\.tar\.gz
+#Hotfix
+#opts="uversionmangle=s/\d.\d.\d.//" \
+#  http://sourceforge.net/projects/lxde/files/ \
+#  LXMusic%20%28music%20player%29/LXMusic%20(\d.\d.\d)/lxmusic-([\d\.]*).tar.gz/download
+#if you want to use SVN, manually use this.
+#http://lxde.svn.sourceforge.net/viewvc/lxde/trunk.tar.gz?view=tar
+

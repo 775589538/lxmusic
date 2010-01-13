@@ -1,0 +1,53 @@
+#! /bin/sh /usr/share/dpatch/dpatch-run
+## 10_root_allowed.dpatch by  <dreamerwolf.tw@gmail.com>
+##
+## All lines beginning with `## DP:' are a description of the patch.
+## DP: Hotfix: Allow run as root in openmoko.
+
+@DPATCH@
+diff -urNad lxmusic-0.3.0~/src/lxmusic.c lxmusic-0.3.0/src/lxmusic.c
+--- lxmusic-0.3.0~/src/lxmusic.c	2009-05-27 06:58:03.000000000 +0800
++++ lxmusic-0.3.0/src/lxmusic.c	2009-08-17 01:46:40.000000000 +0800
+@@ -40,6 +40,11 @@
+ #include "lxmusic-notify.h"
+ #endif
+ 
++/* 10_root_allowed */
++#include <unistd.h>
++
++uid_t getuid(void);
++
+ #include "utils.h"
+ 
+ enum {
+@@ -2251,12 +2256,25 @@
+     /* try to connect to xmms2d, and launch the daemon if needed. */
+     if( !xmmsc_connect(con, getenv("XMMS_PATH")) )
+     {
+-        if( ! g_spawn_command_line_sync( "xmms2-launcher", NULL, NULL, NULL, NULL )
+-            || !xmmsc_connect(con, getenv ("XMMS_PATH")) )
++        if( getuid() == 0 )
+         {
+-            fprintf(stderr, "Connection failed: %s\n",
+-                     xmmsc_get_last_error (con));
+-            return EXIT_FAILURE;
++            if( ! g_spawn_command_line_sync( "xmms2-launcher --yes-run-as-root", NULL, NULL, NULL, NULL )
++                || !xmmsc_connect(con, getenv ("XMMS_PATH")) )
++            {
++                fprintf(stderr, "Connection failed: %s\n",
++                         xmmsc_get_last_error (con));
++                return EXIT_FAILURE;
++            }
++        }
++        else
++        {
++            if( ! g_spawn_command_line_sync( "xmms2-launcher", NULL, NULL, NULL, NULL )
++                || !xmmsc_connect(con, getenv ("XMMS_PATH")) )
++            {
++                fprintf(stderr, "Connection failed: %s\n",
++                         xmmsc_get_last_error (con));
++                return EXIT_FAILURE;
++            }
+         }
+     }
+ 

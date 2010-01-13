@@ -1,0 +1,20 @@
+Source: lxmusic
+Section: sound
+Priority: optional
+Maintainer: Shan-Bin Chen <dreamerwolf.tw@gmail.com>
+Build-Depends: debhelper (>= 7), autotools-dev, libxmmsclient-dev (>= 0.6),
+  libxmmsclient-glib-dev (>= 0.6), xmms2-dev (>= 0.6), intltool, libgtk2.0-dev (>= 2.14.0),
+  pkg-config, automake, python, dpatch (>= 2.0), libnotify-dev (>= 0.4.1)
+Standards-Version: 3.8.3
+Homepage: http://lxde.org/
+
+Package: lxmusic
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, xmms2-core (>=0.6)
+Recommends: xmms2-plugin-alsa | xmms2-plugin-ao | xmms2-plugin-jack | xmms2-plugin-oss | xmms2-plugin-pulse ,
+  xmms2-plugin-id3v2, xmms2-plugin-mad, xmms2-plugin-vorbis
+Suggests: xmms2-plugin-all
+Description: The minimalist music player for LXDE
+ This is based on xmms2, which is lightweight and has server/client design.
+ The user interface is quite simple, clean, and intuitive. At first glance,
+ it looks similar to one of the famous players on Windows - foobar 2000.

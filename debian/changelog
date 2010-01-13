@@ -1,0 +1,38 @@
+lxmusic (0.4.2-1~bpo50+1) lenny-backports; urgency=low
+
+  * Backport .
+
+ -- Shan-Bin Chen <dreamerwolf.tw@gmail.com>  Thu, 14 Jan 2010 05:36:14 +0800
+
+lxmusic (0.4.2-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Shan-Bin Chen <dreamerwolf.tw@gmail.com>  Fri, 01 Jan 2010 14:33:08 +0800
+
+lxmusic (0.4.1-1) unstable; urgency=low
+
+  * New upstream release (Closes: #561810)
+
+ -- Shan-Bin Chen <dreamerwolf.tw@gmail.com>  Wed, 23 Dec 2009 21:03:58 +0800
+
+lxmusic (0.4.0-1) unstable; urgency=low
+
+  * New upstream release (Closes: #541226, #542871)
+  * Fix build-depends (Closes: #540536)
+
+ -- Shan-Bin Chen <dreamerwolf.tw@gmail.com>  Sun, 23 Aug 2009 22:20:40 +0800
+
+lxmusic (0.3.0-1) unstable; urgency=low
+
+  * New upstream release (Closes: #530257, #538319)
+  * Fix build-depends in debian/control (Closes: #534092)
+
+ -- Shan-Bin Chen <dreamerwolf.tw@gmail.com>  Wed, 17 Jun 2009 14:33:14 +0800
+
+lxmusic (0.2.3+svn090103-1) unstable; urgency=low
+
+  * Initial release (Closes: #511775)
+
+ -- Shan-Bin Chen <dreamerwolf.tw@gmail.com>  Wed, 18 Mar 2009 23:16:44 +0800
+
