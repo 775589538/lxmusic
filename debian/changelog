@@ -1,8 +1,8 @@
-lxmusic (0.4.2-1~bpo50+1) lenny-backports; urgency=low
+lxmusic (0.4.2-2) unstable; urgency=low
 
-  * Backport .
+  * Hotfix for xmms2 0.7
 
- -- Shan-Bin Chen <dreamerwolf.tw@gmail.com>  Thu, 14 Jan 2010 05:36:14 +0800
+ -- Shan-Bin Chen <dreamerwolf.tw@gmail.com>  Mon, 01 Mar 2010 19:24:54 +0800
 
 lxmusic (0.4.2-1) unstable; urgency=low
 
