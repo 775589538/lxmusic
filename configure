@@ -2625,7 +2625,7 @@ fi
 
 # Define the identity of the package.
  PACKAGE=lxmusic
- VERSION=0.4.2
+ VERSION=0.4.3
 
 
 cat >>confdefs.h <<_ACEOF
@@ -6135,55 +6135,59 @@ pkg_failed=no
 { $as_echo "$as_me:${as_lineno-$LINENO}: checking for LXMUSIC" >&5
 $as_echo_n "checking for LXMUSIC... " >&6; }
 
-if test -n "$LXMUSIC_CFLAGS"; then
-    pkg_cv_LXMUSIC_CFLAGS="$LXMUSIC_CFLAGS"
- elif test -n "$PKG_CONFIG"; then
-    if test -n "$PKG_CONFIG" && \
+if test -n "$PKG_CONFIG"; then
+    if test -n "$LXMUSIC_CFLAGS"; then
+        pkg_cv_LXMUSIC_CFLAGS="$LXMUSIC_CFLAGS"
+    else
+        if test -n "$PKG_CONFIG" && \
     { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"gtk+-2.0 >= 2.14.0
 	gmodule-export-2.0 >= 2.0
-	xmms2-client >= 0.6
-	xmms2-client-glib >= 0.6\""; } >&5
+	xmms2-client >= 0.7
+	xmms2-client-glib >= 0.7\""; } >&5
   ($PKG_CONFIG --exists --print-errors "gtk+-2.0 >= 2.14.0
 	gmodule-export-2.0 >= 2.0
-	xmms2-client >= 0.6
-	xmms2-client-glib >= 0.6") 2>&5
+	xmms2-client >= 0.7
+	xmms2-client-glib >= 0.7") 2>&5
   ac_status=$?
   $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
   test $ac_status = 0; }; then
   pkg_cv_LXMUSIC_CFLAGS=`$PKG_CONFIG --cflags "gtk+-2.0 >= 2.14.0
 	gmodule-export-2.0 >= 2.0
-	xmms2-client >= 0.6
-	xmms2-client-glib >= 0.6" 2>/dev/null`
+	xmms2-client >= 0.7
+	xmms2-client-glib >= 0.7" 2>/dev/null`
 else
   pkg_failed=yes
 fi
- else
-    pkg_failed=untried
+    fi
+else
+	pkg_failed=untried
 fi
-if test -n "$LXMUSIC_LIBS"; then
-    pkg_cv_LXMUSIC_LIBS="$LXMUSIC_LIBS"
- elif test -n "$PKG_CONFIG"; then
-    if test -n "$PKG_CONFIG" && \
+if test -n "$PKG_CONFIG"; then
+    if test -n "$LXMUSIC_LIBS"; then
+        pkg_cv_LXMUSIC_LIBS="$LXMUSIC_LIBS"
+    else
+        if test -n "$PKG_CONFIG" && \
     { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"gtk+-2.0 >= 2.14.0
 	gmodule-export-2.0 >= 2.0
-	xmms2-client >= 0.6
-	xmms2-client-glib >= 0.6\""; } >&5
+	xmms2-client >= 0.7
+	xmms2-client-glib >= 0.7\""; } >&5
   ($PKG_CONFIG --exists --print-errors "gtk+-2.0 >= 2.14.0
 	gmodule-export-2.0 >= 2.0
-	xmms2-client >= 0.6
-	xmms2-client-glib >= 0.6") 2>&5
+	xmms2-client >= 0.7
+	xmms2-client-glib >= 0.7") 2>&5
   ac_status=$?
   $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
   test $ac_status = 0; }; then
   pkg_cv_LXMUSIC_LIBS=`$PKG_CONFIG --libs "gtk+-2.0 >= 2.14.0
 	gmodule-export-2.0 >= 2.0
-	xmms2-client >= 0.6
-	xmms2-client-glib >= 0.6" 2>/dev/null`
+	xmms2-client >= 0.7
+	xmms2-client-glib >= 0.7" 2>/dev/null`
 else
   pkg_failed=yes
 fi
- else
-    pkg_failed=untried
+    fi
+else
+	pkg_failed=untried
 fi
 
 
@@ -6196,23 +6200,23 @@ else
         _pkg_short_errors_supported=no
 fi
         if test $_pkg_short_errors_supported = yes; then
-	        LXMUSIC_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors "gtk+-2.0 >= 2.14.0
+	        LXMUSIC_PKG_ERRORS=`$PKG_CONFIG --short-errors --errors-to-stdout --print-errors "gtk+-2.0 >= 2.14.0
 	gmodule-export-2.0 >= 2.0
-	xmms2-client >= 0.6
-	xmms2-client-glib >= 0.6" 2>&1`
+	xmms2-client >= 0.7
+	xmms2-client-glib >= 0.7"`
         else
-	        LXMUSIC_PKG_ERRORS=`$PKG_CONFIG --print-errors "gtk+-2.0 >= 2.14.0
+	        LXMUSIC_PKG_ERRORS=`$PKG_CONFIG --errors-to-stdout --print-errors "gtk+-2.0 >= 2.14.0
 	gmodule-export-2.0 >= 2.0
-	xmms2-client >= 0.6
-	xmms2-client-glib >= 0.6" 2>&1`
+	xmms2-client >= 0.7
+	xmms2-client-glib >= 0.7"`
         fi
 	# Put the nasty error message in config.log where it belongs
 	echo "$LXMUSIC_PKG_ERRORS" >&5
 
 	as_fn_error "Package requirements (gtk+-2.0 >= 2.14.0
 	gmodule-export-2.0 >= 2.0
-	xmms2-client >= 0.6
-	xmms2-client-glib >= 0.6) were not met:
+	xmms2-client >= 0.7
+	xmms2-client-glib >= 0.7) were not met:
 
 $LXMUSIC_PKG_ERRORS
 
@@ -6251,10 +6255,11 @@ pkg_failed=no
 { $as_echo "$as_me:${as_lineno-$LINENO}: checking for LIBNOTIFY" >&5
 $as_echo_n "checking for LIBNOTIFY... " >&6; }
 
-if test -n "$LIBNOTIFY_CFLAGS"; then
-    pkg_cv_LIBNOTIFY_CFLAGS="$LIBNOTIFY_CFLAGS"
- elif test -n "$PKG_CONFIG"; then
-    if test -n "$PKG_CONFIG" && \
+if test -n "$PKG_CONFIG"; then
+    if test -n "$LIBNOTIFY_CFLAGS"; then
+        pkg_cv_LIBNOTIFY_CFLAGS="$LIBNOTIFY_CFLAGS"
+    else
+        if test -n "$PKG_CONFIG" && \
     { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"libnotify >= 0.4.1\""; } >&5
   ($PKG_CONFIG --exists --print-errors "libnotify >= 0.4.1") 2>&5
   ac_status=$?
@@ -6264,13 +6269,15 @@ if test -n "$LIBNOTIFY_CFLAGS"; then
 else
   pkg_failed=yes
 fi
- else
-    pkg_failed=untried
+    fi
+else
+	pkg_failed=untried
 fi
-if test -n "$LIBNOTIFY_LIBS"; then
-    pkg_cv_LIBNOTIFY_LIBS="$LIBNOTIFY_LIBS"
- elif test -n "$PKG_CONFIG"; then
-    if test -n "$PKG_CONFIG" && \
+if test -n "$PKG_CONFIG"; then
+    if test -n "$LIBNOTIFY_LIBS"; then
+        pkg_cv_LIBNOTIFY_LIBS="$LIBNOTIFY_LIBS"
+    else
+        if test -n "$PKG_CONFIG" && \
     { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"libnotify >= 0.4.1\""; } >&5
   ($PKG_CONFIG --exists --print-errors "libnotify >= 0.4.1") 2>&5
   ac_status=$?
@@ -6280,8 +6287,9 @@ if test -n "$LIBNOTIFY_LIBS"; then
 else
   pkg_failed=yes
 fi
- else
-    pkg_failed=untried
+    fi
+else
+	pkg_failed=untried
 fi
 
 
@@ -6294,9 +6302,9 @@ else
         _pkg_short_errors_supported=no
 fi
         if test $_pkg_short_errors_supported = yes; then
-	        LIBNOTIFY_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors "libnotify >= 0.4.1" 2>&1`
+	        LIBNOTIFY_PKG_ERRORS=`$PKG_CONFIG --short-errors --errors-to-stdout --print-errors "libnotify >= 0.4.1"`
         else
-	        LIBNOTIFY_PKG_ERRORS=`$PKG_CONFIG --print-errors "libnotify >= 0.4.1" 2>&1`
+	        LIBNOTIFY_PKG_ERRORS=`$PKG_CONFIG --errors-to-stdout --print-errors "libnotify >= 0.4.1"`
         fi
 	# Put the nasty error message in config.log where it belongs
 	echo "$LIBNOTIFY_PKG_ERRORS" >&5
