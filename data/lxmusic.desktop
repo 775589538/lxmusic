@@ -1,0 +1,20 @@
+[Desktop Entry]
+Type=Application
+Name=Music Player
+Name[ja]=音楽プレーヤ
+Name[pt_BR]=Reprodutor de músicas
+Name[sk]=Prehrávač hudby
+GenericName=Music Player
+GenericName[ja]=音楽プレーヤ
+GenericName[pt_BR]=Reprodutor de músicas
+GenericName[sk]=Prehrávač hudby
+Comment=Play your music files easily
+Comment[ja]=簡単に音楽を再生できます
+Comment[pt_BR]=Reproduza seus arquivos de música facilmente
+Comment[sk]=Jednoduché prehrávanie hudobných súborov
+Comment[zh_TW]=簡單地播放你的音樂檔案
+Categories=AudioVideo;Audio;Player;GTK;
+Icon=lxmusic
+Exec=lxmusic
+Terminal=false
+StartupNotify=true
