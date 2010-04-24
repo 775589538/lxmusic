@@ -19,55 +19,62 @@
  *      MA 02110-1301, USA.
  */
 #include <gtk/gtk.h>
-#include "lxmusic-notify.h"
+#include <glib/gi18n.h>
+#include <libnotify/notify.h>
+#include "lxmusic-notify.h"    
 
+#define LXMUSIC_NOTIFY_NOTIFICATION_SHOW( notify )  do  { GError *error = NULL; 	\
+    if (!notify_notification_show (notify, &error)) { 					\
+    	g_warning ("Failed to show notification: %s", error->message); 			\
+	g_error_free (error); 								\
+    }											\
+} while (0);							
 
-LXMusic_Notification* lxmusic_notification_new( GtkStatusIcon *status_icon ) 
+struct _LXMusicNotification
 {
-    LXMusic_Notification *n = g_slice_new( LXMusic_Notification );
-    n->notification = NULL;
-    n->status_icon = status_icon;
-    return n;
+    NotifyNotification *notify;
+};
+
+void lxmusic_do_notify_pixbuf( LXMusicNotification lxn, GdkPixbuf* pixbuf) 
+{
+    notify_notification_set_icon_from_pixbuf ( lxn->notify, pixbuf );
+    LXMUSIC_NOTIFY_NOTIFICATION_SHOW( lxn->notify );
+    g_free(lxn);
 }
 
-void lxmusic_notification_free(  LXMusic_Notification *n )
+void lxmusic_do_notify( LXMusicNotification lxn ) 
 {
-    g_slice_free (LXMusic_Notification, n);
+    GValue val = { 0, };
+    g_value_init (&val, G_TYPE_STRING);
+    g_value_set_string( &val, "lxmusic" );
+    g_object_set_property( G_OBJECT(lxn->notify), "icon-name", &val );
+    g_value_unset (&val);
+    LXMUSIC_NOTIFY_NOTIFICATION_SHOW( lxn->notify );
+    g_free(lxn);
 }
 
-static void
-lxmusic_clear_notify (LXMusic_Notification *n)
+
+
+LXMusicNotification lxmusic_do_notify_prepare(const gchar *artist, const gchar *title, const char *summary, GtkStatusIcon *status_icon)
 {
-    if ( n->notification != NULL ) 
-	notify_notification_close (n->notification, NULL);
-    n->notification = NULL;
-}
 
-void
-lxmusic_do_notify (LXMusic_Notification *n,
-		   const char *summary,
-		   const char *message )
-{
-	NotifyNotification *notify;
-	GError *error = NULL;
-
-	g_return_if_fail (n != NULL);
-	g_return_if_fail (summary != NULL);
-	g_return_if_fail (message != NULL);
-
-	lxmusic_clear_notify (n);
-
-	notify = notify_notification_new (summary, message,
-	                                  "lxmusic", NULL);
-	n->notification = notify;
-
-	notify_notification_attach_to_status_icon (notify, n->status_icon);
-	notify_notification_set_urgency (notify, NOTIFY_URGENCY_NORMAL);
-	notify_notification_set_timeout (notify, NOTIFY_EXPIRES_DEFAULT);
-
-	if (!notify_notification_show (notify, &error)) {
-	    g_warning ("Failed to show notification: %s", error->message);
-	    g_error_free (error);
-	}
+    if (!notify_is_initted ())
+	notify_init ("LXMusic");
+    GString* message = g_string_new("");
+    if ( (artist != NULL) && (title != NULL ) ) {	
+	/* metadata available */
+	g_string_append_printf(message, "<b>%s: </b><i>%s</i>", _("Artist"), artist );
+	g_string_append_printf(message, "\n<b>%s: </b><i>%s</i>", _("Title"), title );
+    }
+    /* use filename without markup */
+    else 			
+	g_string_append( message, title );
+    struct _LXMusicNotification *lxn = g_new ( struct _LXMusicNotification, 1);
+    lxn->notify = notify_notification_new (summary, message->str, NULL, NULL);
+    notify_notification_set_urgency (lxn->notify, NOTIFY_URGENCY_NORMAL);
+    notify_notification_attach_to_status_icon( lxn->notify, status_icon );
+    notify_notification_set_timeout (lxn->notify, NOTIFY_EXPIRES_DEFAULT);
+    g_string_free( message, TRUE );
+    return lxn;
 }
 
