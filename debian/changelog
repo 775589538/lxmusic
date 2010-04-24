@@ -1,10 +1,10 @@
-lxmusic (0.4.4-1) unstable; urgency=low
+lxmusic (0.4.4+git20100425) unstable; urgency=low
 
-  * New upstream release
+  * New upstream release and import git20100425
   * Use XMMS2 Collection API
   * Translation updates
 
- -- Shan-Bin Chen <dreamerwolf.tw@gmail.com>  Sat, 17 Apr 2010 05:41:38 +0800
+ -- Shan-Bin Chen <dreamerwolf.tw@gmail.com>  Sun, 25 Apr 2010 03:26:15 +0800
 
 lxmusic (0.4.3-1) UNRELEASED; urgency=low
 

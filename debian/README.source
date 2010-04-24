@@ -1,2 +1,2 @@
-# Wed, 23 Dec 2009 20:49:34
-10_root_allowed.dpatch , let xmms run in root mode.
+# Sun, 25 Apr 2010 03:43:14 +0800
+10_xmmsv_get_int.dpatch , fix segfaults

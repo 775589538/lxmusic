@@ -1,0 +1,20 @@
+#! /bin/sh /usr/share/dpatch/dpatch-run
+## 10_xmmsv_get_int.dpatch by Shan-Bin Chen <dreamerwolf.tw@gmail.com>
+##
+## DP: Dirty Fix for segfaults
+## http://sourceforge.net/tracker/?func=detail&aid=2982783&group_id=180858&atid=894871
+
+@DPATCH@
+diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' '--exclude=.hg' '--exclude=_darcs' '--exclude=.bzr' lxmusic~/src/lxmusic.c lxmusic/src/lxmusic.c
+--- lxmusic~/src/lxmusic.c	2010-04-25 03:25:56.000000000 +0800
++++ lxmusic/src/lxmusic.c	2010-04-25 03:31:36.000000000 +0800
+@@ -1882,7 +1882,8 @@
+ 
+ 		    /* update id of currently played track */
+ 		    xmmsv_dict_get( val, "id", &int_value );
+-		    xmmsv_get_int( int_value, &cur_track_id );
++		    // FIXME : Dirty Fix for segfaults
++		    // xmmsv_get_int( int_value, &cur_track_id );
+                 }
+ 		/* scroll to currently played song */
+ 		gtk_tree_view_scroll_to_cell(GTK_TREE_VIEW(playlist_view), path, NULL, FALSE, 0.0, 0.0 );

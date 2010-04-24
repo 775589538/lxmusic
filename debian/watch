@@ -8,4 +8,5 @@ http://sf.net/lxde/lxmusic-(.*)\.tar\.gz
 #  LXMusic%20%28music%20player%29/LXMusic%20(\d.\d.\d)/lxmusic-([\d\.]*).tar.gz/download
 #if you want to use SVN, manually use this.
 #http://lxde.svn.sourceforge.net/viewvc/lxde/trunk.tar.gz?view=tar
-
+# git
+# git://lxde.git.sourceforge.net/gitroot/lxde/lxmusic
