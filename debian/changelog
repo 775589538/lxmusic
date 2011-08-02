@@ -1,3 +1,10 @@
+lxmusic (0.4.4+git20110803-1) unstable; urgency=low
+
+  * Add libnotify 0.7 patch (Closes: 630289)
+  * Merge git20110803
+
+ -- Shan-Bin Chen <dreamerwolf.tw@gmail.com>  Wed, 03 Aug 2011 00:21:29 +0800
+
 lxmusic (0.4.4+git20100802-2) unstable; urgency=low
 
   * Enable the hotfix (Closes: 592162)

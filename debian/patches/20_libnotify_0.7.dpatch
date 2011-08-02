@@ -1,0 +1,36 @@
+#! /bin/sh /usr/share/dpatch/dpatch-run
+## 20_libnotify_0.7.dpatch by Jérémy Bobbio <lunar@debian.org>
+##
+## DP: transition to libnotify 0.7
+## http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=630289
+
+@DPATCH@
+diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' '--exclude=.hg' '--exclude=_darcs' '--exclude=.bzr' tmp~/src/lxmusic-notify.c tmp/src/lxmusic-notify.c
+--- tmp~/src/lxmusic-notify.c	2011-08-03 00:50:57.000000000 +0800
++++ tmp/src/lxmusic-notify.c	2011-08-03 00:54:54.000000000 +0800
+@@ -29,6 +29,10 @@
+ #include <libnotify/notify.h>
+ #endif	/* HAVE_LIBNOTIFY */
+ 
++#ifndef NOTIFY_CHECK_VERSION
++#define NOTIFY_CHECK_VERSION(x,y,z) 0
++#endif
++
+ #include "lxmusic-notify.h"    
+ 
+ #define LXMUSIC_NOTIFY_NOTIFICATION_SHOW( notify )  do  { GError *error = NULL; 	\
+@@ -84,9 +88,13 @@
+     else 			
+ 	g_string_append( message, title );
+     struct _LXMusicNotification *lxn = g_new ( struct _LXMusicNotification, 1);
++#if NOTIFY_CHECK_VERSION(0,7,0)
++    lxn->notify = notify_notification_new (summary, message->str, NULL);
++#else
+     lxn->notify = notify_notification_new (summary, message->str, NULL, NULL);
+-    notify_notification_set_urgency (lxn->notify, NOTIFY_URGENCY_NORMAL);
+     notify_notification_attach_to_status_icon( lxn->notify, status_icon );
++#endif
++    notify_notification_set_urgency (lxn->notify, NOTIFY_URGENCY_NORMAL);
+     notify_notification_set_timeout (lxn->notify, NOTIFY_EXPIRES_DEFAULT);
+     g_string_free( message, TRUE );
+     return lxn;
