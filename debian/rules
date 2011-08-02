@@ -44,7 +44,7 @@ clean1:
 	dh_testdir
 	dh_testroot
 	rm -f build-stamp 
-
+	rm -f data/lxmusic.desktop
 	[ ! -f Makefile ] || $(MAKE) distclean
 	rm -f config.sub config.guess
 

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-01-06 16:08+0100\n"
-"PO-Revision-Date: 2010-04-18 00:04+0200\n"
+"POT-Creation-Date: 2010-05-27 13:00+0200\n"
+"PO-Revision-Date: 2010-06-07 16:13+0200\n"
 "Last-Translator: Gunleif <gunleif@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: fo\n"
@@ -18,73 +18,74 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Pootle 2.0.1\n"
 
-#: ../src/lxmusic.c:278
+#: ../src/lxmusic.c:261
 msgid "Official icon of xmms2 by Arnaud DIDRY"
 msgstr "Almen ímynd hjá XMMS2 av Arnaud DIDRY"
 
-#: ../src/lxmusic.c:289
+#: ../src/lxmusic.c:272
 msgid ""
 "Music Player for LXDE\n"
 "Simple GUI XMMS2 client"
 msgstr ""
 "Tónleika avspælari hjá LXDE\n"
-"Einføld  GUI XMMS2 viðskiftari"
+"Einføld GUI XMMS2 viðskiftari"
 
 #. default
-#: ../src/lxmusic.c:462 ../src/utils.c:98 ../data/lxmusic.ui.glade.h:14
+#: ../src/lxmusic.c:445 ../src/utils.c:98 ../data/lxmusic.ui.glade.h:14
 msgid "LXMusic"
 msgstr "LXMusic"
 
-#: ../src/lxmusic.c:625
+#: ../src/lxmusic.c:670
 msgid "Bitrate: "
-msgstr "Bitferð"
+msgstr "Bitferð: "
 
-#: ../src/lxmusic.c:927
+#: ../src/lxmusic.c:972
 msgid "Audio Files"
 msgstr "Ljóðfílur"
 
-#: ../src/lxmusic.c:932
+#: ../src/lxmusic.c:977
 msgid "All Files"
 msgstr "Allar fílur"
 
-#: ../src/lxmusic.c:959
+#: ../src/lxmusic.c:1004
 msgid "Input a URL"
 msgstr "Skriva eina URL"
 
-#. metadata available
-#: ../src/lxmusic.c:1370 ../src/lxmusic.c:1771 ../data/lxmusic.ui.glade.h:7
-msgid "Artist"
-msgstr "Listafólk"
-
-#: ../src/lxmusic.c:1378 ../data/lxmusic.ui.glade.h:5
-msgid "Album"
-msgstr "Album"
-
-#: ../src/lxmusic.c:1386 ../src/lxmusic.c:1772
-msgid "Title"
-msgstr "Heiti"
-
-#: ../src/lxmusic.c:1392
-msgid "Length"
-msgstr "Longd"
-
-#: ../src/lxmusic.c:1564
-msgid "Default"
-msgstr "Forsett"
-
-#: ../src/lxmusic.c:1682
-msgid "Pause"
-msgstr "Steðga bráfeingis"
-
-#: ../src/lxmusic.c:1696
-msgid "Play"
-msgstr "Avspæl"
-
-#: ../src/lxmusic.c:1777
+#: ../src/lxmusic.c:1220 ../src/lxmusic.c:1808
 msgid "Now Playing:"
 msgstr "Spæli nú:"
 
-#: ../src/lxmusic.c:2242
+#. metadata available
+#: ../src/lxmusic.c:1428 ../data/lxmusic.ui.glade.h:7
+#: ../src/lxmusic-notify.c:66
+msgid "Artist"
+msgstr "Listafólk"
+
+#: ../src/lxmusic.c:1436 ../data/lxmusic.ui.glade.h:5
+msgid "Album"
+msgstr "Album"
+
+#: ../src/lxmusic.c:1444 ../src/lxmusic-notify.c:67
+msgid "Title"
+msgstr "Heiti"
+
+#: ../src/lxmusic.c:1450
+msgid "Length"
+msgstr "Longd"
+
+#: ../src/lxmusic.c:1617
+msgid "Default"
+msgstr "Forsett"
+
+#: ../src/lxmusic.c:1735
+msgid "Pause"
+msgstr "Steðga bráfeingis"
+
+#: ../src/lxmusic.c:1749
+msgid "Play"
+msgstr "Avspæl"
+
+#: ../src/lxmusic.c:2301
 msgid "Create new playlist"
 msgstr "Stovna nýggjan avspælingarlista"
 
@@ -97,7 +98,7 @@ msgstr "Brek"
 #. * to get list of possible config variables
 #: ../src/lxmusic-plugin-config.c:17
 msgid "Advanced Linux Sound Architecture"
-msgstr "ALSA (Framkomið Linux Ljóð Byggilag)"
+msgstr "ALSA Framkomið Linux Ljóð Byggilag"
 
 #: ../src/lxmusic-plugin-config.c:18 ../src/lxmusic-plugin-config.c:23
 #: ../src/lxmusic-plugin-config.c:28
@@ -111,7 +112,7 @@ msgstr "Miksari:"
 #. oss
 #: ../src/lxmusic-plugin-config.c:22
 msgid "Open Sound System"
-msgstr "OSS (Opið Ljóð Kervi)"
+msgstr "OSS Opið Ljóð Kervi"
 
 #. ao
 #: ../src/lxmusic-plugin-config.c:27
@@ -195,7 +196,7 @@ msgstr "Skriva inn lyklaorð her"
 
 #: ../data/lxmusic.ui.glade.h:11
 msgid "Favorites"
-msgstr ""
+msgstr "Yndisløg"
 
 #: ../data/lxmusic.ui.glade.h:12 ../data/track-info.ui.glade.h:8
 msgid "File Properties"
@@ -315,7 +316,7 @@ msgstr "Ljóð"
 
 #: ../data/pref-dlg.ui.glade.h:4
 msgid "Buffer Size: "
-msgstr "Tippistødd:"
+msgstr "Tippistødd: "
 
 #: ../data/pref-dlg.ui.glade.h:5
 msgid "CD-ROM Device: "
@@ -327,7 +328,7 @@ msgstr "Hald fram at avspæla, eftir at LXMusic er sløkkt"
 
 #: ../data/pref-dlg.ui.glade.h:7
 msgid "Default ID3 V1 Encoding: "
-msgstr "Forsett ID3 V1 koting:"
+msgstr "Forsett ID3 V1 koting: "
 
 #: ../data/pref-dlg.ui.glade.h:8
 msgid "General"
@@ -338,7 +339,6 @@ msgid "KB"
 msgstr "KB"
 
 #: ../data/pref-dlg.ui.glade.h:10
-#, fuzzy
 msgid "Minimize to system tray on close"
 msgstr "Minsta til kervisbakka, tá ið sløkkt verður"
 
@@ -358,7 +358,7 @@ msgstr ""
 # Ískoyti = plugin
 #: ../data/pref-dlg.ui.glade.h:13
 msgid "Plugin: "
-msgstr "Ískoyti:"
+msgstr "Ískoyti: "
 
 #: ../data/pref-dlg.ui.glade.h:14
 msgid "Preference"
@@ -366,7 +366,7 @@ msgstr "Sertokki"
 
 #: ../data/pref-dlg.ui.glade.h:15
 msgid "Show system tray icon"
-msgstr ""
+msgstr "Vís kervisbakka ímynd"
 
 #: ../data/track-info.ui.glade.h:1
 msgid "<b>Album: </b>"

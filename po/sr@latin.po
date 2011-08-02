@@ -1,135 +1,154 @@
+# Serbian translation for lxmusic package
+# Copyright (C) 2010 the LXDE team
+# This file is distributed under the same license as the lxmusic package.
+# Jay A. Fleming <titio.nehru.naser@gmail.com>, 2010.
+#
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: lxmusic\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-05-27 13:00+0200\n"
-"PO-Revision-Date: \n"
-"Last-Translator: SZERVÁC Attila <sas@321.hu>\n"
-"Language-Team: Hungarian <debian-l10n-hungarian@lists.d.o>\n"
+"POT-Creation-Date: 2009-12-14 23:56+0100\n"
+"PO-Revision-Date: 2010-06-15 06:21+0100\n"
+"Last-Translator: Jay Alexander Fleming <tito.nehru.naser@gmail.com>\n"
+"Language-Team: Serbian\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n>1;\n"
-"X-Poedit-Language: Hungarian\n"
-"X-Poedit-Country: HUNGARY\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-Language: Serbian\n"
+"X-Poedit-SourceCharset: utf-8\n"
 
-#: ../src/lxmusic.c:261
+#: ../src/lxmusic.c:271
 msgid "Official icon of xmms2 by Arnaud DIDRY"
-msgstr "Arnaud DIDRY hivatalos xmms2 ikonja"
+msgstr "Zvanična ikona za XMMS2 (napravio Arnaud DIDRY)"
 
-#: ../src/lxmusic.c:272
+#: ../src/lxmusic.c:282
 msgid ""
 "Music Player for LXDE\n"
 "Simple GUI XMMS2 client"
 msgstr ""
-"LXDE zenelejátszó\n"
-"Egyszerű grafikus XMMS2 kliens"
+"LXDE — Zvukovnik\n"
+"Jednostavan klijent za XMMS2"
 
 #. default
-#: ../src/lxmusic.c:445 ../src/utils.c:98 ../data/lxmusic.ui.glade.h:14
+#: ../src/lxmusic.c:455
+#: ../src/utils.c:168
+#: ../data/lxmusic.ui.glade.h:14
 msgid "LXMusic"
-msgstr "LXMusic"
+msgstr "Zvukovnik"
 
-#: ../src/lxmusic.c:670
+#: ../src/lxmusic.c:638
 msgid "Bitrate: "
-msgstr "Bitarány:"
+msgstr "Bitski protok:"
+
+#: ../src/lxmusic.c:940
+msgid "Audio Files"
+msgstr "Zvučne datoteke"
+
+#: ../src/lxmusic.c:945
+msgid "All Files"
+msgstr "Sve datoteke"
 
 #: ../src/lxmusic.c:972
-msgid "Audio Files"
-msgstr "Hang fájlok"
-
-#: ../src/lxmusic.c:977
-msgid "All Files"
-msgstr "Minden fájl"
-
-#: ../src/lxmusic.c:1004
 msgid "Input a URL"
-msgstr "URL megadása"
-
-#: ../src/lxmusic.c:1220 ../src/lxmusic.c:1808
-msgid "Now Playing:"
-msgstr "Most fut:"
+msgstr "Unesite lokaciju (URL)"
 
 #. metadata available
-#: ../src/lxmusic.c:1428 ../data/lxmusic.ui.glade.h:7
-#: ../src/lxmusic-notify.c:66
+#: ../src/lxmusic.c:1363
+#: ../src/lxmusic.c:1780
+#: ../data/lxmusic.ui.glade.h:7
 msgid "Artist"
-msgstr "Művész"
+msgstr "Izvođač"
 
-#: ../src/lxmusic.c:1436 ../data/lxmusic.ui.glade.h:5
+#: ../src/lxmusic.c:1371
+#: ../data/lxmusic.ui.glade.h:5
 msgid "Album"
 msgstr "Album"
 
-#: ../src/lxmusic.c:1444 ../src/lxmusic-notify.c:67
+#: ../src/lxmusic.c:1379
+#: ../src/lxmusic.c:1781
 msgid "Title"
-msgstr "Cím"
+msgstr "Naslov"
 
-#: ../src/lxmusic.c:1450
+#: ../src/lxmusic.c:1385
 msgid "Length"
-msgstr "Hossz"
+msgstr "Dužina"
 
-#: ../src/lxmusic.c:1617
+#: ../src/lxmusic.c:1557
 msgid "Default"
-msgstr "Alap"
+msgstr "Podrazumevano"
 
-#: ../src/lxmusic.c:1735
+#: ../src/lxmusic.c:1675
 msgid "Pause"
-msgstr "Szünet"
+msgstr "Pauziraj"
 
-#: ../src/lxmusic.c:1749
+#: ../src/lxmusic.c:1689
 msgid "Play"
-msgstr "Lejátszás"
+msgstr "Pusti"
 
-#: ../src/lxmusic.c:2301
+#: ../src/lxmusic.c:1786
+msgid "Now Playing:"
+msgstr "Upravo puštam: "
+
+#: ../src/lxmusic.c:2248
 msgid "Create new playlist"
-msgstr "Új lista létrehozása"
+msgstr "Napravi listu pesama"
 
 #: ../src/utils.c:81
 msgid "Error"
-msgstr "Hiba"
+msgstr "Greška"
 
 #. alsa use:
 #. * # xmms2 config_list|egrep "^alsa"
 #. * to get list of possible config variables
 #: ../src/lxmusic-plugin-config.c:17
+#, fuzzy
 msgid "Advanced Linux Sound Architecture"
-msgstr "Fejlett Linux Hangrendszer (ALSA)"
+msgstr "Advanced Linux Sound Architecture"
 
-#: ../src/lxmusic-plugin-config.c:18 ../src/lxmusic-plugin-config.c:23
+#: ../src/lxmusic-plugin-config.c:18
+#: ../src/lxmusic-plugin-config.c:23
 #: ../src/lxmusic-plugin-config.c:28
 msgid "Device:"
-msgstr "Eszköz:"
+msgstr "Uređaj:"
 
-#: ../src/lxmusic-plugin-config.c:19 ../src/lxmusic-plugin-config.c:24
+#: ../src/lxmusic-plugin-config.c:19
+#: ../src/lxmusic-plugin-config.c:24
 msgid "Mixer:"
-msgstr "Keverő:"
+msgstr "Tonska kontrola:"
 
 #. oss
 #: ../src/lxmusic-plugin-config.c:22
+#, fuzzy
 msgid "Open Sound System"
 msgstr "Open Sound System"
 
 #. ao
 #: ../src/lxmusic-plugin-config.c:27
+#, fuzzy
 msgid "Cross-platform audio output library"
-msgstr "Kereszt-platformos hang kimeneti könyvtár"
+msgstr "Cross-platform audio output library"
 
 #. pulse
 #: ../src/lxmusic-plugin-config.c:31
+#, fuzzy
 msgid "PulseAudio"
 msgstr "PulseAudio"
 
 #: ../src/lxmusic-plugin-config.c:32
 msgid "Name:"
-msgstr "Név:"
+msgstr "Ime:"
 
-#: ../src/lxmusic-plugin-config.c:33 ../src/lxmusic-plugin-config.c:38
+#: ../src/lxmusic-plugin-config.c:33
+#: ../src/lxmusic-plugin-config.c:38
 msgid "Server:"
-msgstr "Kiszolgáló:"
+msgstr "Server:"
 
 #: ../src/lxmusic-plugin-config.c:34
 msgid "Sink:"
-msgstr "Kimenet:"
+msgstr "Sink:"
 
 #. airtunes
 #: ../src/lxmusic-plugin-config.c:37
@@ -138,144 +157,147 @@ msgstr "AirTunes"
 
 #. jack
 #: ../src/lxmusic-plugin-config.c:41
+#, fuzzy
 msgid "JACK Audio Connection Kit"
 msgstr "JACK Audio Connection Kit"
 
 #: ../src/lxmusic-plugin-config.c:43
+#, fuzzy
 msgid "Disk Writer"
-msgstr "Lemezre írás"
+msgstr "Disk Writer"
 
 #: ../src/lxmusic-plugin-config.c:44
 msgid "Destination Directory:"
-msgstr "Cél könyvtár:"
+msgstr "Odredišni direktorijum:"
 
 #: ../data/lxmusic.desktop.in.h:1
 msgid "Music Player"
-msgstr "Zenelejátszó"
+msgstr "Zvukovnik"
 
 #: ../data/lxmusic.desktop.in.h:2
 msgid "Play your music files easily"
-msgstr "Játszd le zenefájljaid kényelmesen"
+msgstr "Slušajte i organizujte vaše pesme"
 
 #: ../data/lxmusic.ui.glade.h:1
 msgid "Add Files or Folders"
-msgstr "Fájlok és mappák hozzáadása"
+msgstr "Dodaj datoteke ili direktorijume"
 
 #: ../data/lxmusic.ui.glade.h:2
 msgid "Add To Playlist"
-msgstr "Hozzáadás a listához"
+msgstr "Dodaj u listu pesama"
 
 #: ../data/lxmusic.ui.glade.h:3
 msgid "Add URL"
-msgstr "URL hozzáadása"
+msgstr "Dodaj lokaciju (URL)"
 
 #: ../data/lxmusic.ui.glade.h:4
 msgid "Add files to the playlist"
-msgstr "Fájlok hozzáadása a listához"
+msgstr "Dodaj datoteke u listu pesama"
 
 #: ../data/lxmusic.ui.glade.h:6
 msgid "All"
-msgstr "Minden"
+msgstr "Sve"
 
 #: ../data/lxmusic.ui.glade.h:8
 msgid "Create _New Playlist"
-msgstr "Új lista hozzáadása"
+msgstr "Napravi _novu listu pesama"
 
 #: ../data/lxmusic.ui.glade.h:9
 msgid "Current Playlist"
-msgstr "Jelenlegi lista"
+msgstr "Trenutna lista"
 
 #: ../data/lxmusic.ui.glade.h:10
 msgid "Enter keyword here"
-msgstr "Adj meg kulcsszót"
+msgstr "Unesite ključnu reč ovde"
 
 #: ../data/lxmusic.ui.glade.h:11
 msgid "Favorites"
-msgstr "Kedvencek"
+msgstr "Omiljene"
 
-#: ../data/lxmusic.ui.glade.h:12 ../data/track-info.ui.glade.h:8
+#: ../data/lxmusic.ui.glade.h:12
+#: ../data/track-info.ui.glade.h:8
 msgid "File Properties"
-msgstr "Fájl tulajdonságok"
+msgstr "Osobine datoteke"
 
 #: ../data/lxmusic.ui.glade.h:13
 msgid "Filter:"
-msgstr "Szűrő:"
+msgstr "Filter: "
 
 #: ../data/lxmusic.ui.glade.h:15
 msgid "Locate currently played track"
-msgstr "Jelenleg játszott szám felkutatása"
+msgstr "Idi na pesmu koju slušam"
 
 #: ../data/lxmusic.ui.glade.h:16
 msgid "Media Library"
-msgstr "Média tár"
+msgstr "Audioteka"
 
 #: ../data/lxmusic.ui.glade.h:17
 msgid "Next"
-msgstr "Következő"
+msgstr "Sledeća"
 
 #: ../data/lxmusic.ui.glade.h:18
 msgid "No Repeat"
-msgstr "Nincs ismétlés"
+msgstr "Bez ponavljanja"
 
 #: ../data/lxmusic.ui.glade.h:19
 msgid "Play/Pause"
-msgstr "Lejátszás/Szünet"
+msgstr "Pusti/Pauziraj"
 
 #: ../data/lxmusic.ui.glade.h:20
 msgid "Previous"
-msgstr "Előző"
+msgstr "Prethodna"
 
 #: ../data/lxmusic.ui.glade.h:21
 msgid "Remove All Items"
-msgstr "Minden elem eltávolítása"
+msgstr "Obriši sve"
 
 #: ../data/lxmusic.ui.glade.h:22
 msgid "Remove From Playlist"
-msgstr "Törlés a listából"
+msgstr "Obriši iz liste"
 
 #: ../data/lxmusic.ui.glade.h:23
 msgid "Remove Selected Items"
-msgstr "Kijelölt elemek eltávolítása"
+msgstr "Obriši odabrano"
 
 #: ../data/lxmusic.ui.glade.h:24
 msgid "Remove items from the playlist"
-msgstr "Elemek törlése a listából"
+msgstr "Obriši stavke iz liste"
 
 #: ../data/lxmusic.ui.glade.h:25
 msgid "Repeat All"
-msgstr "Minden ismétel"
+msgstr "Ponavljaj sve"
 
 #: ../data/lxmusic.ui.glade.h:26
 msgid "Repeat Current"
-msgstr "Jelenlegi szám ismétlése"
+msgstr "Ponavljaj trenutnu pesmu"
 
 #: ../data/lxmusic.ui.glade.h:27
 msgid "Show Playlist"
-msgstr "Lista mutatása"
+msgstr "Prikaži listu pesama"
 
 #: ../data/lxmusic.ui.glade.h:28
 msgid "Stop"
-msgstr "Állj"
+msgstr "Zaustavi"
 
 #: ../data/lxmusic.ui.glade.h:29
 msgid "Track Name"
-msgstr "A szám neve"
+msgstr "Naslov"
 
 #: ../data/lxmusic.ui.glade.h:30
 msgid "_Delete Current Playlist"
-msgstr "Jelen lista törlése"
+msgstr "_Obriši trenutnu listu"
 
 #: ../data/lxmusic.ui.glade.h:31
 msgid "_File"
-msgstr "_Fájl"
+msgstr "_Datoteka"
 
 #: ../data/lxmusic.ui.glade.h:32
 msgid "_Help"
-msgstr "_Súgó"
+msgstr "_Pomoć"
 
 #: ../data/lxmusic.ui.glade.h:33
 msgid "_Locate Currently Played"
-msgstr "_Jelenleg játszott szám felkutatása"
+msgstr "_Idi na pesmu koju slušam"
 
 #: ../data/lxmusic.ui.glade.h:34
 msgid "_Playlist"
@@ -283,51 +305,51 @@ msgstr "_Lista"
 
 #: ../data/lxmusic.ui.glade.h:35
 msgid "_Switch To Playlist"
-msgstr "_Váltás a listára"
+msgstr "_Prebaci se na listu"
 
 #: ../data/lxmusic.ui.glade.h:36
 msgid "_Tools"
-msgstr "_Eszközök"
+msgstr "Ala_tke"
 
 #: ../data/lxmusic.ui.glade.h:37
 msgid "_View"
-msgstr "_Nézet"
+msgstr "Pre_gled"
 
 #: ../data/popup.ui.glade.h:1
 msgid "_Show Main Window"
-msgstr "Főablak mutatása"
+msgstr "_Prikaži glavni prozor"
 
 #: ../data/pref-dlg.ui.glade.h:1
 msgid "<b>Audio CD</b>"
-msgstr "<b>Hang CD</b>"
+msgstr "<b>Zvučni disk</b>"
 
 #: ../data/pref-dlg.ui.glade.h:2
 msgid "<b>Output</b>"
-msgstr "<b>Kimenet</b>"
+msgstr "<b>Izlaz</b>"
 
 #: ../data/pref-dlg.ui.glade.h:3
 msgid "Audio"
-msgstr "Hang"
+msgstr "Zvuk"
 
 #: ../data/pref-dlg.ui.glade.h:4
 msgid "Buffer Size: "
-msgstr "Puffer méret:"
+msgstr "Veličina privremene ostave: "
 
 #: ../data/pref-dlg.ui.glade.h:5
 msgid "CD-ROM Device: "
-msgstr "CD-ROM eszköz: "
+msgstr "CD-ROM uređaj: "
 
 #: ../data/pref-dlg.ui.glade.h:6
 msgid "Continue playback in background after exiting LXMusic"
-msgstr "A lejátszás a háttérben folyik az LXMusic bezárása után"
+msgstr "Nastavi reprodukciju u pozadini posle zatvaranja programa"
 
 #: ../data/pref-dlg.ui.glade.h:7
 msgid "Default ID3 V1 Encoding: "
-msgstr "Alap ID3 V1 kódolás: "
+msgstr "Podrazumevano kodiranje za ID3 V1: "
 
 #: ../data/pref-dlg.ui.glade.h:8
 msgid "General"
-msgstr "Általános"
+msgstr "Opšte"
 
 #: ../data/pref-dlg.ui.glade.h:9
 msgid "KB"
@@ -335,86 +357,53 @@ msgstr "KB"
 
 #: ../data/pref-dlg.ui.glade.h:10
 msgid "Minimize to system tray on close"
-msgstr "Bezárást indítva a rendszertálcára"
+msgstr "Po zatvaranju prozora postavi u sistemsku kasetu"
 
 #: ../data/pref-dlg.ui.glade.h:11
 msgid "Misc"
-msgstr "Egyéb"
+msgstr "Razno"
 
 #: ../data/pref-dlg.ui.glade.h:12
-msgid ""
-"Music files can be played without graphical user interface to save system "
-"resources"
-msgstr ""
-"A zenei fájlok grafikus felület nélkül is lejátszhatók az erőforrásokat "
-"kímélve"
+msgid "Music files can be played without graphical user interface to save system resources"
+msgstr "Omogućena reprodukcija bez grafičkog prikaza (kod slabijih računara)"
 
 #: ../data/pref-dlg.ui.glade.h:13
 msgid "Plugin: "
-msgstr "Beillesztés: "
+msgstr "Dodaci: "
 
 #: ../data/pref-dlg.ui.glade.h:14
 msgid "Preference"
-msgstr "Választás"
+msgstr "Postavke"
 
 #: ../data/pref-dlg.ui.glade.h:15
 msgid "Show system tray icon"
-msgstr "Rendszer tálca ikon mutatása"
+msgstr "Prikaži ikonu programa u sistemskoj kaseti"
 
 #: ../data/track-info.ui.glade.h:1
 msgid "<b>Album: </b>"
-msgstr "<b>Album: </b>"
+msgstr "<b>Albumi: </b>"
 
 #: ../data/track-info.ui.glade.h:2
 msgid "<b>Artist: </b>"
-msgstr "<b>Előadó: </b>"
+msgstr "<b>Izvođač: </b>"
 
 #: ../data/track-info.ui.glade.h:3
 msgid "<b>Comment: </b>"
-msgstr "<b>Megjegyzés: </b>"
+msgstr "<b>Napomena: </b>"
 
 #: ../data/track-info.ui.glade.h:4
 msgid "<b>File Type: </b>"
-msgstr "<b>Fájl típus: </b>"
+msgstr "<b>Vrsta datoteke: </b>"
 
 #: ../data/track-info.ui.glade.h:5
 msgid "<b>File: </b>"
-msgstr "<b>Fájl: </b>"
+msgstr "<b>Datoteka: </b>"
 
 #: ../data/track-info.ui.glade.h:6
 msgid "<b>Size: </b>"
-msgstr "<b>Méret: </b>"
+msgstr "<b>Veličina: </b>"
 
 #: ../data/track-info.ui.glade.h:7
 msgid "<b>Title: </b>"
-msgstr "<b>Cím: </b>"
+msgstr "<b>Naslov: </b>"
 
-#, fuzzy
-#~ msgid "Server"
-#~ msgstr "Meghajtó:"
-
-#~ msgid ""
-#~ "All\n"
-#~ "Track Name\n"
-#~ "Artist\n"
-#~ "Album"
-#~ msgstr ""
-#~ "Mind\n"
-#~ "Szám Címe\n"
-#~ "Előadó\n"
-#~ "Album"
-
-#~ msgid ""
-#~ "No Repeat\n"
-#~ "Repeat Current\n"
-#~ "Repeat All"
-#~ msgstr ""
-#~ "Nincs ismétlés\n"
-#~ "Jelenleg játszott ismétlése\n"
-#~ "Mind ismétlése"
-
-#~ msgid "Use OSS for audio output"
-#~ msgstr "OSS használata a kimenethez"
-
-#~ msgid "Use Pulse Audio for audio output"
-#~ msgstr "Pulse Audio használata a kimenethez"

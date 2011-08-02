@@ -1,19 +1,21 @@
-lxmusic (0.4.4+git20100425) unstable; urgency=low
+lxmusic (0.4.4+git20100802-2) unstable; urgency=low
 
-  * New upstream release and import git20100425
+  * Enable the hotfix (Closes: 592162)
+  * Clean some lintian warnings.
+
+ -- Shan-Bin Chen <dreamerwolf.tw@gmail.com>  Thu, 19 Aug 2010 12:33:20 +0800
+
+lxmusic (0.4.4+git20100802-1) unstable; urgency=low
+
+  * New upstream release and import git 20100802
   * Use XMMS2 Collection API
   * Translation updates
-
- -- Shan-Bin Chen <dreamerwolf.tw@gmail.com>  Sun, 25 Apr 2010 03:26:15 +0800
-
-lxmusic (0.4.3-1) UNRELEASED; urgency=low
-
-  * New upstream release
   * Adopt XMMS2 DrNo 0.7 API changes
   * Fix a double free (on_playback_track_loaded)
   * Translation updates
+  * remove hotfix
 
- -- Shan-Bin Chen <dreamerwolf.tw@gmail.com>  Tue, 16 Mar 2010 01:50:23 +0800
+ -- Shan-Bin Chen <dreamerwolf.tw@gmail.com>  Wed, 04 Aug 2010 21:54:08 +0800
 
 lxmusic (0.4.2-2) unstable; urgency=low
 
