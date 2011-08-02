@@ -1,90 +1,93 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Dutch translation for the lxmusic package.
+# Copyright (C) the author of the lxmusic package.
+# This file is distributed under the same license as the 
+# lxmusic package.
+# Pjotr, 2011.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: lxmusic\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-01-06 16:08+0100\n"
-"PO-Revision-Date: 2009-12-29 18:36+0100\n"
-"Last-Translator: Sander De Voogdt <celettu@gmail.com>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2011-07-22 16:34+0200\n"
+"PO-Revision-Date: 2011-06-13 11:34+0200\n"
+"Last-Translator: Pjotr\n"
+"Language-Team: Dutch\n"
+"Language: nl (Dutch)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Pootle 1.1.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../src/lxmusic.c:278
+#: ../src/lxmusic.c:263
 msgid "Official icon of xmms2 by Arnaud DIDRY"
-msgstr "Officieel icoon van xmms2 door Arnaud DIDRY"
+msgstr "Officieel pictogram van xmms2 door Arnaud DIDRY"
 
-#: ../src/lxmusic.c:289
+#: ../src/lxmusic.c:274
 msgid ""
 "Music Player for LXDE\n"
 "Simple GUI XMMS2 client"
 msgstr ""
 "Muziekspeler voor LXDE\n"
-"Eenvoudige GUI XMMS client"
+"Eenvoudige grafische schil voor XMMS2"
 
 #. default
-#: ../src/lxmusic.c:462 ../src/utils.c:98 ../data/lxmusic.ui.glade.h:14
+#: ../src/lxmusic.c:447 ../src/utils.c:98 ../data/lxmusic.ui.glade.h:14
 msgid "LXMusic"
 msgstr "LXMusic"
 
-#: ../src/lxmusic.c:625
+#: ../src/lxmusic.c:694
 msgid "Bitrate: "
 msgstr "Bitrate: "
 
-#: ../src/lxmusic.c:927
+#: ../src/lxmusic.c:996
 msgid "Audio Files"
 msgstr "Audiobestanden"
 
-#: ../src/lxmusic.c:932
+#: ../src/lxmusic.c:1001
 msgid "All Files"
-msgstr "Alle bestanden"
+msgstr "Alle Bestanden"
 
-#: ../src/lxmusic.c:959
+#: ../src/lxmusic.c:1028
 msgid "Input a URL"
 msgstr "Voer een URL in"
 
+#: ../src/lxmusic.c:1244 ../src/lxmusic.c:1832
+msgid "Now Playing:"
+msgstr "Nu aan het afspelen:"
+
 #. metadata available
-#: ../src/lxmusic.c:1370 ../src/lxmusic.c:1771 ../data/lxmusic.ui.glade.h:7
+#: ../src/lxmusic.c:1452 ../data/lxmusic.ui.glade.h:7
+#: ../src/lxmusic-notify.c:80
 msgid "Artist"
 msgstr "Artiest"
 
-#: ../src/lxmusic.c:1378 ../data/lxmusic.ui.glade.h:5
+#: ../src/lxmusic.c:1460 ../data/lxmusic.ui.glade.h:5
 msgid "Album"
 msgstr "Album"
 
-#: ../src/lxmusic.c:1386 ../src/lxmusic.c:1772
+#: ../src/lxmusic.c:1468 ../src/lxmusic-notify.c:81
 msgid "Title"
 msgstr "Titel"
 
-#: ../src/lxmusic.c:1392
+#: ../src/lxmusic.c:1474
 msgid "Length"
 msgstr "Lengte"
 
-#: ../src/lxmusic.c:1564
+#: ../src/lxmusic.c:1641
 msgid "Default"
 msgstr "Standaard"
 
-#: ../src/lxmusic.c:1682
+#: ../src/lxmusic.c:1759
 msgid "Pause"
 msgstr "Pauze"
 
-#: ../src/lxmusic.c:1696
+#: ../src/lxmusic.c:1773
 msgid "Play"
-msgstr "Play"
+msgstr "Afspelen"
 
-#: ../src/lxmusic.c:1777
-msgid "Now Playing:"
-msgstr "Nu aan het afspelen"
-
-#: ../src/lxmusic.c:2242
+#: ../src/lxmusic.c:2326
 msgid "Create new playlist"
-msgstr "Nieuwe afspeellijst aanmaken"
+msgstr "Nieuwe speellijst aanmaken"
 
 #: ../src/utils.c:81
 msgid "Error"
@@ -104,7 +107,7 @@ msgstr "Apparaat:"
 
 #: ../src/lxmusic-plugin-config.c:19 ../src/lxmusic-plugin-config.c:24
 msgid "Mixer:"
-msgstr "Mixer:"
+msgstr "Mengpaneel:"
 
 #. oss
 #: ../src/lxmusic-plugin-config.c:22
@@ -114,7 +117,7 @@ msgstr "Open Sound System"
 #. ao
 #: ../src/lxmusic-plugin-config.c:27
 msgid "Cross-platform audio output library"
-msgstr "Cross-platform audio output library"
+msgstr "Platform-overstijgend bibliotheekbestand voor audio-uitvoer"
 
 #. pulse
 #: ../src/lxmusic-plugin-config.c:31
@@ -141,11 +144,11 @@ msgstr "AirTunes"
 #. jack
 #: ../src/lxmusic-plugin-config.c:41
 msgid "JACK Audio Connection Kit"
-msgstr "JACK Audio Connectie Kit"
+msgstr "JACK Audio Connection Kit"
 
 #: ../src/lxmusic-plugin-config.c:43
 msgid "Disk Writer"
-msgstr "Disk Writer"
+msgstr "Schijfbeschrijver"
 
 #: ../src/lxmusic-plugin-config.c:44
 msgid "Destination Directory:"
@@ -157,15 +160,15 @@ msgstr "Muziekspeler"
 
 #: ../data/lxmusic.desktop.in.h:2
 msgid "Play your music files easily"
-msgstr "Speel je muziek met gemak"
+msgstr "Speel uw muziek af met gemak"
 
 #: ../data/lxmusic.ui.glade.h:1
 msgid "Add Files or Folders"
-msgstr "Bestanden of mappen toevoegen"
+msgstr "Bestanden of Mappen toevoegen"
 
 #: ../data/lxmusic.ui.glade.h:2
 msgid "Add To Playlist"
-msgstr "Toevoegen aan afspeellijst"
+msgstr "Toevoegen aan Speellijst"
 
 #: ../data/lxmusic.ui.glade.h:3
 msgid "Add URL"
@@ -173,7 +176,7 @@ msgstr "URL toevoegen"
 
 #: ../data/lxmusic.ui.glade.h:4
 msgid "Add files to the playlist"
-msgstr "Bestanden toevoegen aan de afspeellijst"
+msgstr "Bestanden toevoegen aan de speellijst"
 
 #: ../data/lxmusic.ui.glade.h:6
 msgid "All"
@@ -181,15 +184,15 @@ msgstr "Alle"
 
 #: ../data/lxmusic.ui.glade.h:8
 msgid "Create _New Playlist"
-msgstr "Nieuwe afspeellijst aanmaken"
+msgstr "_Nieuwe Speellijst aanmaken"
 
 #: ../data/lxmusic.ui.glade.h:9
 msgid "Current Playlist"
-msgstr "Huidige afspeellijst"
+msgstr "Huidige Speellijst"
 
 #: ../data/lxmusic.ui.glade.h:10
 msgid "Enter keyword here"
-msgstr "Zoekterm invoeren"
+msgstr "Zoekterm hier invoeren"
 
 #: ../data/lxmusic.ui.glade.h:11
 msgid "Favorites"
@@ -197,7 +200,7 @@ msgstr "Favorieten"
 
 #: ../data/lxmusic.ui.glade.h:12 ../data/track-info.ui.glade.h:8
 msgid "File Properties"
-msgstr "Bestandseigenschappen"
+msgstr "Bestandeigenschappen"
 
 #: ../data/lxmusic.ui.glade.h:13
 msgid "Filter:"
@@ -205,7 +208,7 @@ msgstr "Filter:"
 
 #: ../data/lxmusic.ui.glade.h:15
 msgid "Locate currently played track"
-msgstr "Huidig nummer opzoeken"
+msgstr "Nu spelend nummer opzoeken"
 
 #: ../data/lxmusic.ui.glade.h:16
 msgid "Media Library"
@@ -217,11 +220,11 @@ msgstr "Volgende"
 
 #: ../data/lxmusic.ui.glade.h:18
 msgid "No Repeat"
-msgstr "Geen herhaling"
+msgstr "Geen Herhaling"
 
 #: ../data/lxmusic.ui.glade.h:19
 msgid "Play/Pause"
-msgstr "Play/Pauze"
+msgstr "Speel af/Pauzeer"
 
 #: ../data/lxmusic.ui.glade.h:20
 msgid "Previous"
@@ -229,19 +232,19 @@ msgstr "Vorige"
 
 #: ../data/lxmusic.ui.glade.h:21
 msgid "Remove All Items"
-msgstr "Alle items verwijderen"
+msgstr "Alle elementen verwijderen"
 
 #: ../data/lxmusic.ui.glade.h:22
 msgid "Remove From Playlist"
-msgstr "Van afspeellijst verwijderen"
+msgstr "Van Speellijst verwijderen"
 
 #: ../data/lxmusic.ui.glade.h:23
 msgid "Remove Selected Items"
-msgstr "Geselecteerde items verwijderen"
+msgstr "Geselecteerde elementen verwijderen"
 
 #: ../data/lxmusic.ui.glade.h:24
 msgid "Remove items from the playlist"
-msgstr "Items van afspeellijst verwijderen"
+msgstr "Elementen van speellijst verwijderen"
 
 #: ../data/lxmusic.ui.glade.h:25
 msgid "Repeat All"
@@ -253,7 +256,7 @@ msgstr "Huidige herhalen"
 
 #: ../data/lxmusic.ui.glade.h:27
 msgid "Show Playlist"
-msgstr "Toon Afspeellijst"
+msgstr "Toon Speellijst"
 
 #: ../data/lxmusic.ui.glade.h:28
 msgid "Stop"
@@ -265,59 +268,59 @@ msgstr "Naam van het nummer"
 
 #: ../data/lxmusic.ui.glade.h:30
 msgid "_Delete Current Playlist"
-msgstr "Huidige Afspeellijst verwijderen"
+msgstr "_Verwijder Huidige Speellijst"
 
 #: ../data/lxmusic.ui.glade.h:31
 msgid "_File"
-msgstr "Bestand"
+msgstr "_Bestand"
 
 #: ../data/lxmusic.ui.glade.h:32
 msgid "_Help"
-msgstr "_Help"
+msgstr "_Hulp"
 
 #: ../data/lxmusic.ui.glade.h:33
 msgid "_Locate Currently Played"
-msgstr "Huidg nummer opzoeken"
+msgstr "_Zoek thans spelend nummer op"
 
 #: ../data/lxmusic.ui.glade.h:34
 msgid "_Playlist"
-msgstr "Afspeellijst"
+msgstr "_Speellijst"
 
 #: ../data/lxmusic.ui.glade.h:35
 msgid "_Switch To Playlist"
-msgstr "Over_schakelen naar afspeellijst"
+msgstr "Over_schakelen naar Speellijst"
 
 #: ../data/lxmusic.ui.glade.h:36
 msgid "_Tools"
-msgstr "Extra"
+msgstr "_Gereedschappen"
 
 #: ../data/lxmusic.ui.glade.h:37
 msgid "_View"
-msgstr "Beeld"
+msgstr "_Beeld"
 
 #: ../data/popup.ui.glade.h:1
 msgid "_Show Main Window"
-msgstr "Toon Hoofdvenster"
+msgstr "_Toon Hoofdvenster"
 
 #: ../data/pref-dlg.ui.glade.h:1
 msgid "<b>Audio CD</b>"
-msgstr "<b>Audio CD</b>"
+msgstr "<b>Geluids-CD</b>"
 
 #: ../data/pref-dlg.ui.glade.h:2
 msgid "<b>Output</b>"
-msgstr "<b>Output</b>"
+msgstr "<b>Uitvoer</b>"
 
 #: ../data/pref-dlg.ui.glade.h:3
 msgid "Audio"
-msgstr "Audio"
+msgstr "Geluid"
 
 #: ../data/pref-dlg.ui.glade.h:4
 msgid "Buffer Size: "
-msgstr "Buffergrootte:"
+msgstr "Buffergrootte: "
 
 #: ../data/pref-dlg.ui.glade.h:5
 msgid "CD-ROM Device: "
-msgstr "CD-ROM Apparaat"
+msgstr "CD-ROM-apparaat: "
 
 #: ../data/pref-dlg.ui.glade.h:6
 msgid "Continue playback in background after exiting LXMusic"
@@ -325,7 +328,7 @@ msgstr "In de achtergrond blijven afspelen na het sluiten van LXMusic"
 
 #: ../data/pref-dlg.ui.glade.h:7
 msgid "Default ID3 V1 Encoding: "
-msgstr "Standaard ID3 V1 Encodering: "
+msgstr "Standaard ID3 V1 Codering: "
 
 #: ../data/pref-dlg.ui.glade.h:8
 msgid "General"
@@ -337,18 +340,19 @@ msgstr "KB"
 
 #: ../data/pref-dlg.ui.glade.h:10
 msgid "Minimize to system tray on close"
-msgstr "Sluiten naar Systeemvak"
+msgstr "Minimaliseren naar systeemvak bij sluiten"
 
 #: ../data/pref-dlg.ui.glade.h:11
 msgid "Misc"
-msgstr "Misc"
+msgstr "Varia"
 
 #: ../data/pref-dlg.ui.glade.h:12
 msgid ""
 "Music files can be played without graphical user interface to save system "
 "resources"
 msgstr ""
-"Audiobestanden kunnen afgespeeld worden zonder GUI om systeem te sparen"
+"Muziekbestanden kunnen worden afgespeeld zonder grafische schil, om "
+"systeemkracht te sparen"
 
 #: ../data/pref-dlg.ui.glade.h:13
 msgid "Plugin: "
@@ -360,7 +364,7 @@ msgstr "Voorkeur"
 
 #: ../data/pref-dlg.ui.glade.h:15
 msgid "Show system tray icon"
-msgstr "Toon icoon in systeemvak"
+msgstr "Toon pictogram in systeemvak"
 
 #: ../data/track-info.ui.glade.h:1
 msgid "<b>Album: </b>"
@@ -376,7 +380,7 @@ msgstr "<b>Commentaar: </b>"
 
 #: ../data/track-info.ui.glade.h:4
 msgid "<b>File Type: </b>"
-msgstr "<b>Bestandstype: </b>"
+msgstr "<b>Bestandtype: </b>"
 
 #: ../data/track-info.ui.glade.h:5
 msgid "<b>File: </b>"
@@ -390,9 +394,8 @@ msgstr "<b>Grootte: </b>"
 msgid "<b>Title: </b>"
 msgstr "<b>Titel: </b>"
 
-#, fuzzy
 #~ msgid "Server"
-#~ msgstr "Stuurapparaat:"
+#~ msgstr "Server"
 
 #~ msgid ""
 #~ "All\n"
@@ -401,7 +404,7 @@ msgstr "<b>Titel: </b>"
 #~ "Album"
 #~ msgstr ""
 #~ "Alle\n"
-#~ "Bestandsnaam\n"
+#~ "Spoornaam\n"
 #~ "Artiest\n"
 #~ "Album"
 
@@ -415,7 +418,7 @@ msgstr "<b>Titel: </b>"
 #~ "Alle herhalen"
 
 #~ msgid "Use OSS for audio output"
-#~ msgstr "Gebruik OSS voor audio output"
+#~ msgstr "Gebruik OSS voor audio-uitvoer"
 
 #~ msgid "Use Pulse Audio for audio output"
-#~ msgstr "Gebruik Pulse Audio voor audio output"
+#~ msgstr "Gebruik Pulse Audio voor audio-uitvoer"

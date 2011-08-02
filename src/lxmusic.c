@@ -38,9 +38,7 @@
 #include <gdk/gdkx.h>
 #include <gdk/gdkkeysyms.h>
 
-#ifdef HAVE_LIBNOTIFY
 #include "lxmusic-notify.h"
-#endif
 
 #include "lxmusic-plugin-config.h"
 #include "utils.h"
@@ -88,6 +86,7 @@ static void 	send_notification_pixbuf		( LXMusicNotification lxn, GdkPixbuf *pix
 static int 	update_track				( xmmsv_t *value, GtkTreeIter* it );
 static int 	on_coll_info_received			( xmmsv_t* value, void* user_data );
 static int 	on_picture_front_received		( xmmsv_t* value, void* user_data );
+static int 	on_playback_started			( xmmsv_t* value, void* user_data );
 
 static xmmsc_connection_t *con = NULL;
 static GtkWidget *main_win = NULL;
@@ -141,6 +140,9 @@ static int win_ypos = 0;
 
 void 			on_locate_cur_track	(GtkAction* act, gpointer user_data);
 void 			on_play_btn_clicked	(GtkButton* btn, gpointer user_data);
+
+static gboolean 	on_tray_icon_middle_clicked	(GtkWidget *widget, GdkEventButton *event, gpointer data);
+static void 		on_volume_btn_scrolled		(GtkWidget *widget, GdkEventScroll *event, gpointer user_data);
 
 static GtkTreeIter	get_current_track_iter	();
 static gboolean		get_track_properties 	(xmmsv_t *value, TrackProperties *properties);
@@ -445,6 +447,28 @@ static void create_tray_icon()
     gtk_status_icon_set_tooltip(GTK_STATUS_ICON(tray_icon), _("LXMusic"));
     g_signal_connect(tray_icon, "activate", G_CALLBACK(on_tray_icon_activate), NULL );
     g_signal_connect(tray_icon, "popup-menu", G_CALLBACK(on_tray_icon_popup_menu), NULL );
+    g_signal_connect(tray_icon, "scroll-event", G_CALLBACK(on_volume_btn_scrolled), volume_btn);
+    g_signal_connect(tray_icon, "button_press_event", G_CALLBACK(on_tray_icon_middle_clicked), NULL );
+ }
+
+static gboolean on_tray_icon_middle_clicked(GtkWidget *widget, GdkEventButton *event, gpointer data) { 
+    /* Only handle the keypress event on middle click Toggle play/pause */
+    if ( event->button == 2 ) {
+	xmmsc_result_t *res;
+	if( playback_status == XMMS_PLAYBACK_STATUS_PLAY )
+	{
+	    res = xmmsc_playback_pause(con);
+	    xmmsc_result_notifier_set_and_unref(res, on_playback_started, NULL);
+	}
+	else
+	{
+	    res = xmmsc_playback_start(con);
+	    xmmsc_result_unref(res);
+	}
+	return TRUE;
+	
+    } 
+    return FALSE;
 }
 
 void on_preference(GtkAction* act, gpointer data)
@@ -1821,7 +1845,6 @@ static int on_playback_track_loaded( xmmsv_t* value, void* user_data )
 
 static void send_notification_pixbuf( LXMusicNotification lxn, GdkPixbuf *pixbuf ) 
 {
-#ifdef HAVE_LIBNOTIFY
     if(!GTK_WIDGET_VISIBLE(main_win))  
     {
 	/* FIXME: Hardcoded notification icon size */
@@ -1829,16 +1852,12 @@ static void send_notification_pixbuf( LXMusicNotification lxn, GdkPixbuf *pixbuf
 	lxmusic_do_notify_pixbuf( lxn, scaled_pixbuf );
 	gdk_pixbuf_unref( scaled_pixbuf );
     }
-    
-#endif	/* HAVE_LIBNOTIFY */
 }
 
 static void send_notification( LXMusicNotification lxn ) 
 {
-#ifdef HAVE_LIBNOTIFY
     if(!GTK_WIDGET_VISIBLE(main_win)) 
 	lxmusic_do_notify( lxn );
-#endif	/* HAVE_LIBNOTIFY */
 }
 
 
@@ -1976,7 +1995,7 @@ static void on_volume_btn_changed(GtkScaleButton* btn, gdouble val, gpointer use
 
 static void on_volume_btn_scrolled(GtkWidget *widget, GdkEventScroll *event, gpointer user_data)
 {
-	guint volume;
+	gshort volume;
 	GtkAdjustment *vol_adj;
 	xmmsc_result_t *res;
 	res = xmmsc_playback_volume_get(con);
@@ -1987,10 +2006,16 @@ static void on_volume_btn_scrolled(GtkWidget *widget, GdkEventScroll *event, gpo
 	{
 		case GDK_SCROLL_UP:
 			volume = gtk_adjustment_get_value (vol_adj) + 2;
+			if ( volume >= 100 ){
+			  volume = 100;
+			}
 			gtk_adjustment_set_value (GTK_ADJUSTMENT(vol_adj), volume);
 			break;
 		case GDK_SCROLL_DOWN:
 			volume = gtk_adjustment_get_value (vol_adj) - 2;
+			if ( volume <= 0 ){
+			  volume = 0;
+			}
 			gtk_adjustment_set_value (GTK_ADJUSTMENT(vol_adj), volume);
 			break;
 		default:

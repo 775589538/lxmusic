@@ -2,88 +2,90 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LXMusic 0.3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-01-06 16:08+0100\n"
-"PO-Revision-Date: 2009-12-31 21:50+0100\n"
-"Last-Translator: Matej <paxmanpwnz@gmail.com>\n"
+"POT-Creation-Date: 2011-07-22 16:34+0200\n"
+"PO-Revision-Date: 2011-02-14 15:11+0200\n"
+"Last-Translator: Klemen <klemen.kosir@gmx.com>\n"
 "Language-Team: Slovenian <paxmanpwnz@gmail.com>\n"
+"Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
-"%100==4 ? 2 : 3);\n"
-"X-Generator: Pootle 1.1.0\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
+"%100==4 ? 3 : 0);\n"
+"X-Generator: Pootle 2.0.5\n"
 "X-Poedit-Language: Slovenian\n"
 "X-Poedit-Country: SLOVENIA\n"
 
-#: ../src/lxmusic.c:278
+#: ../src/lxmusic.c:263
 msgid "Official icon of xmms2 by Arnaud DIDRY"
-msgstr "Uradne ikone xmms2 od Arnaud DIDRY"
+msgstr "Uradno ikono XMMS2 je ustvaril Arnaud Didry"
 
-#: ../src/lxmusic.c:289
+#: ../src/lxmusic.c:274
 msgid ""
 "Music Player for LXDE\n"
 "Simple GUI XMMS2 client"
 msgstr ""
-"Predvajalnik zvoka za LXDE\n"
+"Predvajalnik glasbe za LXDE\n"
 "Grafični odjemalec za XMMS2"
 
 #. default
-#: ../src/lxmusic.c:462 ../src/utils.c:98 ../data/lxmusic.ui.glade.h:14
+#: ../src/lxmusic.c:447 ../src/utils.c:98 ../data/lxmusic.ui.glade.h:14
 msgid "LXMusic"
 msgstr "LXMusic"
 
-#: ../src/lxmusic.c:625
+#: ../src/lxmusic.c:694
 msgid "Bitrate: "
-msgstr "Bitna hitrost:"
+msgstr "Bitna hitrost: "
 
-#: ../src/lxmusic.c:927
+#: ../src/lxmusic.c:996
 msgid "Audio Files"
 msgstr "Zvočne datoteke"
 
-#: ../src/lxmusic.c:932
+#: ../src/lxmusic.c:1001
 msgid "All Files"
 msgstr "Vse datoteke"
 
-#: ../src/lxmusic.c:959
+#: ../src/lxmusic.c:1028
 msgid "Input a URL"
-msgstr "Vnesi URL naslov"
+msgstr "Vnesite URL naslov"
 
-#. metadata available
-#: ../src/lxmusic.c:1370 ../src/lxmusic.c:1771 ../data/lxmusic.ui.glade.h:7
-msgid "Artist"
-msgstr "Avtor"
-
-#: ../src/lxmusic.c:1378 ../data/lxmusic.ui.glade.h:5
-msgid "Album"
-msgstr "Album"
-
-#: ../src/lxmusic.c:1386 ../src/lxmusic.c:1772
-msgid "Title"
-msgstr "Naslov"
-
-#: ../src/lxmusic.c:1392
-msgid "Length"
-msgstr "Dolžina"
-
-#: ../src/lxmusic.c:1564
-msgid "Default"
-msgstr "Privzeto"
-
-#: ../src/lxmusic.c:1682
-msgid "Pause"
-msgstr "Pavza"
-
-#: ../src/lxmusic.c:1696
-msgid "Play"
-msgstr "Predvajaj"
-
-#: ../src/lxmusic.c:1777
+#: ../src/lxmusic.c:1244 ../src/lxmusic.c:1832
 msgid "Now Playing:"
 msgstr "Predvaja se:"
 
-#: ../src/lxmusic.c:2242
+#. metadata available
+#: ../src/lxmusic.c:1452 ../data/lxmusic.ui.glade.h:7
+#: ../src/lxmusic-notify.c:80
+msgid "Artist"
+msgstr "Izvajalec"
+
+#: ../src/lxmusic.c:1460 ../data/lxmusic.ui.glade.h:5
+msgid "Album"
+msgstr "Album"
+
+#: ../src/lxmusic.c:1468 ../src/lxmusic-notify.c:81
+msgid "Title"
+msgstr "Naslov"
+
+#: ../src/lxmusic.c:1474
+msgid "Length"
+msgstr "Trajanje"
+
+#: ../src/lxmusic.c:1641
+msgid "Default"
+msgstr "Privzeti seznam"
+
+#: ../src/lxmusic.c:1759
+msgid "Pause"
+msgstr "Premor"
+
+#: ../src/lxmusic.c:1773
+msgid "Play"
+msgstr "Predvajaj"
+
+#: ../src/lxmusic.c:2326
 msgid "Create new playlist"
-msgstr "_Ustvari nov seznam:"
+msgstr "Ustvari nov seznam predvajanja"
 
 #: ../src/utils.c:81
 msgid "Error"
@@ -103,7 +105,7 @@ msgstr "Naprava:"
 
 #: ../src/lxmusic-plugin-config.c:19 ../src/lxmusic-plugin-config.c:24
 msgid "Mixer:"
-msgstr "Mešalec:"
+msgstr "Mešalnik:"
 
 #. oss
 #: ../src/lxmusic-plugin-config.c:22
@@ -113,7 +115,7 @@ msgstr "Open Sound System"
 #. ao
 #: ../src/lxmusic-plugin-config.c:27
 msgid "Cross-platform audio output library"
-msgstr "Med-platformna izhodna zvočna knjižnica"
+msgstr "Knjižnica za izhod zvoka, ki deluje v različnih okoljih"
 
 #. pulse
 #: ../src/lxmusic-plugin-config.c:31
@@ -144,7 +146,7 @@ msgstr "JACK Audio Connection Kit"
 
 #: ../src/lxmusic-plugin-config.c:43
 msgid "Disk Writer"
-msgstr "Pisanje na disk"
+msgstr "Zapisovalec na disk"
 
 #: ../src/lxmusic-plugin-config.c:44
 msgid "Destination Directory:"
@@ -156,7 +158,7 @@ msgstr "Predvajalnik glasbe"
 
 #: ../data/lxmusic.desktop.in.h:2
 msgid "Play your music files easily"
-msgstr "Enostavno predvajanje vaših glasbenih datotek"
+msgstr "Predvajajte svoje glasbene datoteke"
 
 #: ../data/lxmusic.ui.glade.h:1
 msgid "Add Files or Folders"
@@ -164,7 +166,7 @@ msgstr "Dodaj datoteke ali mape"
 
 #: ../data/lxmusic.ui.glade.h:2
 msgid "Add To Playlist"
-msgstr "Dodaj na seznam"
+msgstr "Dodaj na seznam predvajanja"
 
 #: ../data/lxmusic.ui.glade.h:3
 msgid "Add URL"
@@ -172,7 +174,7 @@ msgstr "Dodaj URL"
 
 #: ../data/lxmusic.ui.glade.h:4
 msgid "Add files to the playlist"
-msgstr "Dodaj na seznam"
+msgstr "Dodaj datoteke na seznam predvajanja"
 
 #: ../data/lxmusic.ui.glade.h:6
 msgid "All"
@@ -180,15 +182,15 @@ msgstr "Vse"
 
 #: ../data/lxmusic.ui.glade.h:8
 msgid "Create _New Playlist"
-msgstr "Ustvari _nov seznam"
+msgstr "Ustvari nov seznam predvajanja"
 
 #: ../data/lxmusic.ui.glade.h:9
 msgid "Current Playlist"
-msgstr "Trenutni seznam"
+msgstr "Trenutni seznam predvajanja"
 
 #: ../data/lxmusic.ui.glade.h:10
 msgid "Enter keyword here"
-msgstr "Vpiši ključno besedo"
+msgstr "Vpišite ključne besede"
 
 #: ../data/lxmusic.ui.glade.h:11
 msgid "Favorites"
@@ -200,7 +202,7 @@ msgstr "Lastnosti datoteke"
 
 #: ../data/lxmusic.ui.glade.h:13
 msgid "Filter:"
-msgstr "Išči:"
+msgstr "Iskanje:"
 
 #: ../data/lxmusic.ui.glade.h:15
 msgid "Locate currently played track"
@@ -220,7 +222,7 @@ msgstr "Brez ponavljanja"
 
 #: ../data/lxmusic.ui.glade.h:19
 msgid "Play/Pause"
-msgstr "Predvajaj/pavziraj"
+msgstr "Predvajaj/premor"
 
 #: ../data/lxmusic.ui.glade.h:20
 msgid "Previous"
@@ -228,19 +230,19 @@ msgstr "Prejšnja"
 
 #: ../data/lxmusic.ui.glade.h:21
 msgid "Remove All Items"
-msgstr "Odstrani vse"
+msgstr "Odstrani vse predmete"
 
 #: ../data/lxmusic.ui.glade.h:22
 msgid "Remove From Playlist"
-msgstr "Odstrani s seznama"
+msgstr "Odstrani s seznama predvajanja"
 
 #: ../data/lxmusic.ui.glade.h:23
 msgid "Remove Selected Items"
-msgstr "Odstrani izbrano"
+msgstr "Odstrani izbrane predmete"
 
 #: ../data/lxmusic.ui.glade.h:24
 msgid "Remove items from the playlist"
-msgstr "Odstrani s seznama"
+msgstr "Odstrani predmete s seznama predvajanja"
 
 #: ../data/lxmusic.ui.glade.h:25
 msgid "Repeat All"
@@ -252,19 +254,19 @@ msgstr "Ponovi enega"
 
 #: ../data/lxmusic.ui.glade.h:27
 msgid "Show Playlist"
-msgstr "Prikaži seznam"
+msgstr "Pokaži seznam predvajanaj"
 
 #: ../data/lxmusic.ui.glade.h:28
 msgid "Stop"
-msgstr "Ustavi"
+msgstr "Zaustavi"
 
 #: ../data/lxmusic.ui.glade.h:29
 msgid "Track Name"
-msgstr "Naslov"
+msgstr "Naslov skladbe"
 
 #: ../data/lxmusic.ui.glade.h:30
 msgid "_Delete Current Playlist"
-msgstr "_Izbriši trenutni seznam"
+msgstr "_Izbriši trenutni seznam predvajanja"
 
 #: ../data/lxmusic.ui.glade.h:31
 msgid "_File"
@@ -276,15 +278,15 @@ msgstr "_Pomoč"
 
 #: ../data/lxmusic.ui.glade.h:33
 msgid "_Locate Currently Played"
-msgstr "Najdi _trenutno predvajanega"
+msgstr "Najdi _trenutno predvajano skladbo"
 
 #: ../data/lxmusic.ui.glade.h:34
 msgid "_Playlist"
-msgstr "_Seznam"
+msgstr "_Seznam predvajanja"
 
 #: ../data/lxmusic.ui.glade.h:35
 msgid "_Switch To Playlist"
-msgstr "_Preklopi na seznam"
+msgstr "_Preklopi na seznam predvajanja"
 
 #: ../data/lxmusic.ui.glade.h:36
 msgid "_Tools"
@@ -296,7 +298,7 @@ msgstr "P_ogled"
 
 #: ../data/popup.ui.glade.h:1
 msgid "_Show Main Window"
-msgstr "Prikaži _glavno okno"
+msgstr "Pokaži _glavno okno"
 
 #: ../data/pref-dlg.ui.glade.h:1
 msgid "<b>Audio CD</b>"
@@ -312,11 +314,11 @@ msgstr "Zvok"
 
 #: ../data/pref-dlg.ui.glade.h:4
 msgid "Buffer Size: "
-msgstr "Velikost predpomnilnika:"
+msgstr "Velikost medpomnilnika: "
 
 #: ../data/pref-dlg.ui.glade.h:5
 msgid "CD-ROM Device: "
-msgstr "CD-ROM naprava: "
+msgstr "Naprava CD-ROM: "
 
 #: ../data/pref-dlg.ui.glade.h:6
 msgid "Continue playback in background after exiting LXMusic"
@@ -324,7 +326,7 @@ msgstr "Po izhodu nadaljuj predvajanje v ozadju"
 
 #: ../data/pref-dlg.ui.glade.h:7
 msgid "Default ID3 V1 Encoding: "
-msgstr "Privzeto kodiranje ID3 V1:"
+msgstr "Privzeto kodiranje ID3 V1: "
 
 #: ../data/pref-dlg.ui.glade.h:8
 msgid "General"
@@ -336,31 +338,31 @@ msgstr "KB"
 
 #: ../data/pref-dlg.ui.glade.h:10
 msgid "Minimize to system tray on close"
-msgstr "Pomanjšaj v sistemski pladenj"
+msgstr "Ob zaprtju skrči v sistemsko vrstico"
 
 #: ../data/pref-dlg.ui.glade.h:11
 msgid "Misc"
-msgstr "Drugo"
+msgstr "Razno"
 
 #: ../data/pref-dlg.ui.glade.h:12
 msgid ""
 "Music files can be played without graphical user interface to save system "
 "resources"
 msgstr ""
-"Za manjšo porabo sistemskih sredstev se lahko zvočne datoteke predvaja brez "
-"uporabniškega vmesnika"
+"Za manjšo porabo sistemskih sredstev se lahko glasbene datoteke predvaja "
+"brez grafičnega vmesnika"
 
 #: ../data/pref-dlg.ui.glade.h:13
 msgid "Plugin: "
-msgstr "Vtičnik:"
+msgstr "Vstavek: "
 
 #: ../data/pref-dlg.ui.glade.h:14
 msgid "Preference"
-msgstr "Nastavitve"
+msgstr "Možnosti"
 
 #: ../data/pref-dlg.ui.glade.h:15
 msgid "Show system tray icon"
-msgstr "Prikaži ikono v sistemskem pladnju"
+msgstr "Pokaži ikono v sistemski vrstici"
 
 #: ../data/track-info.ui.glade.h:1
 msgid "<b>Album: </b>"
@@ -368,15 +370,15 @@ msgstr "<b>Album: </b>"
 
 #: ../data/track-info.ui.glade.h:2
 msgid "<b>Artist: </b>"
-msgstr "<b>Avtor: </b>"
+msgstr "<b>Izvajalec: </b>"
 
 #: ../data/track-info.ui.glade.h:3
 msgid "<b>Comment: </b>"
-msgstr "<b>Komentar: </b>"
+msgstr "<b>Opomba: </b>"
 
 #: ../data/track-info.ui.glade.h:4
 msgid "<b>File Type: </b>"
-msgstr "<b>Tip datoteke: </b>"
+msgstr "<b>Vrsta datoteke: </b>"
 
 #: ../data/track-info.ui.glade.h:5
 msgid "<b>File: </b>"
