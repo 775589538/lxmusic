@@ -613,8 +613,6 @@ LIBNOTIFY_LIBS
 LIBNOTIFY_CFLAGS
 LXMUSIC_LIBS
 LXMUSIC_CFLAGS
-PKG_CONFIG_LIBDIR
-PKG_CONFIG_PATH
 PKG_CONFIG
 DATADIRNAME
 ALL_LINGUAS
@@ -746,8 +744,6 @@ LIBS
 CPPFLAGS
 CPP
 PKG_CONFIG
-PKG_CONFIG_PATH
-PKG_CONFIG_LIBDIR
 LXMUSIC_CFLAGS
 LXMUSIC_LIBS
 LIBNOTIFY_CFLAGS
@@ -1381,10 +1377,6 @@ Some influential environment variables:
               you have headers in a nonstandard directory <include dir>
   CPP         C preprocessor
   PKG_CONFIG  path to pkg-config utility
-  PKG_CONFIG_PATH
-              directories to add to pkg-config's search path
-  PKG_CONFIG_LIBDIR
-              path overriding pkg-config's built-in search path
   LXMUSIC_CFLAGS
               C compiler flags for LXMUSIC, overriding pkg-config
   LXMUSIC_LIBS
@@ -6024,10 +6016,6 @@ fi
 
 
 
-
-
-
-
 if test "x$ac_cv_env_PKG_CONFIG_set" != "xset"; then
 	if test -n "$ac_tool_prefix"; then
   # Extract the first word of "${ac_tool_prefix}pkg-config", so it can be a program name with args.
@@ -6140,16 +6128,18 @@ $as_echo "yes" >&6; }
 $as_echo "no" >&6; }
 		PKG_CONFIG=""
 	fi
+
 fi
 
 pkg_failed=no
 { $as_echo "$as_me:${as_lineno-$LINENO}: checking for LXMUSIC" >&5
 $as_echo_n "checking for LXMUSIC... " >&6; }
 
-if test -n "$LXMUSIC_CFLAGS"; then
-    pkg_cv_LXMUSIC_CFLAGS="$LXMUSIC_CFLAGS"
- elif test -n "$PKG_CONFIG"; then
-    if test -n "$PKG_CONFIG" && \
+if test -n "$PKG_CONFIG"; then
+    if test -n "$LXMUSIC_CFLAGS"; then
+        pkg_cv_LXMUSIC_CFLAGS="$LXMUSIC_CFLAGS"
+    else
+        if test -n "$PKG_CONFIG" && \
     { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"gtk+-2.0 >= 2.14.0
 	gmodule-export-2.0 >= 2.0
 	xmms2-client >= 0.7
@@ -6168,13 +6158,15 @@ if test -n "$LXMUSIC_CFLAGS"; then
 else
   pkg_failed=yes
 fi
- else
-    pkg_failed=untried
+    fi
+else
+	pkg_failed=untried
 fi
-if test -n "$LXMUSIC_LIBS"; then
-    pkg_cv_LXMUSIC_LIBS="$LXMUSIC_LIBS"
- elif test -n "$PKG_CONFIG"; then
-    if test -n "$PKG_CONFIG" && \
+if test -n "$PKG_CONFIG"; then
+    if test -n "$LXMUSIC_LIBS"; then
+        pkg_cv_LXMUSIC_LIBS="$LXMUSIC_LIBS"
+    else
+        if test -n "$PKG_CONFIG" && \
     { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"gtk+-2.0 >= 2.14.0
 	gmodule-export-2.0 >= 2.0
 	xmms2-client >= 0.7
@@ -6193,15 +6185,14 @@ if test -n "$LXMUSIC_LIBS"; then
 else
   pkg_failed=yes
 fi
- else
-    pkg_failed=untried
+    fi
+else
+	pkg_failed=untried
 fi
 
 
 
 if test $pkg_failed = yes; then
-   	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
-$as_echo "no" >&6; }
 
 if $PKG_CONFIG --atleast-pkgconfig-version 0.20; then
         _pkg_short_errors_supported=yes
@@ -6209,15 +6200,15 @@ else
         _pkg_short_errors_supported=no
 fi
         if test $_pkg_short_errors_supported = yes; then
-	        LXMUSIC_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors "gtk+-2.0 >= 2.14.0
+	        LXMUSIC_PKG_ERRORS=`$PKG_CONFIG --short-errors --errors-to-stdout --print-errors "gtk+-2.0 >= 2.14.0
 	gmodule-export-2.0 >= 2.0
 	xmms2-client >= 0.7
-	xmms2-client-glib >= 0.7" 2>&1`
+	xmms2-client-glib >= 0.7"`
         else
-	        LXMUSIC_PKG_ERRORS=`$PKG_CONFIG --print-errors "gtk+-2.0 >= 2.14.0
+	        LXMUSIC_PKG_ERRORS=`$PKG_CONFIG --errors-to-stdout --print-errors "gtk+-2.0 >= 2.14.0
 	gmodule-export-2.0 >= 2.0
 	xmms2-client >= 0.7
-	xmms2-client-glib >= 0.7" 2>&1`
+	xmms2-client-glib >= 0.7"`
         fi
 	# Put the nasty error message in config.log where it belongs
 	echo "$LXMUSIC_PKG_ERRORS" >&5
@@ -6234,10 +6225,9 @@ installed software in a non-standard prefix.
 
 Alternatively, you may set the environment variables LXMUSIC_CFLAGS
 and LXMUSIC_LIBS to avoid the need to call pkg-config.
-See the pkg-config man page for more details." "$LINENO" 5
+See the pkg-config man page for more details.
+" "$LINENO" 5
 elif test $pkg_failed = untried; then
-     	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
-$as_echo "no" >&6; }
 	{ { $as_echo "$as_me:${as_lineno-$LINENO}: error: in \`$ac_pwd':" >&5
 $as_echo "$as_me: error: in \`$ac_pwd':" >&2;}
 as_fn_error "The pkg-config script could not be found or is too old.  Make sure it
@@ -6255,7 +6245,7 @@ else
 	LXMUSIC_LIBS=$pkg_cv_LXMUSIC_LIBS
         { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
 $as_echo "yes" >&6; }
-
+	:
 fi
 
 LIBNOTIFY_CFLAGS=
@@ -6265,10 +6255,11 @@ pkg_failed=no
 { $as_echo "$as_me:${as_lineno-$LINENO}: checking for LIBNOTIFY" >&5
 $as_echo_n "checking for LIBNOTIFY... " >&6; }
 
-if test -n "$LIBNOTIFY_CFLAGS"; then
-    pkg_cv_LIBNOTIFY_CFLAGS="$LIBNOTIFY_CFLAGS"
- elif test -n "$PKG_CONFIG"; then
-    if test -n "$PKG_CONFIG" && \
+if test -n "$PKG_CONFIG"; then
+    if test -n "$LIBNOTIFY_CFLAGS"; then
+        pkg_cv_LIBNOTIFY_CFLAGS="$LIBNOTIFY_CFLAGS"
+    else
+        if test -n "$PKG_CONFIG" && \
     { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"libnotify >= 0.4.1\""; } >&5
   ($PKG_CONFIG --exists --print-errors "libnotify >= 0.4.1") 2>&5
   ac_status=$?
@@ -6278,13 +6269,15 @@ if test -n "$LIBNOTIFY_CFLAGS"; then
 else
   pkg_failed=yes
 fi
- else
-    pkg_failed=untried
+    fi
+else
+	pkg_failed=untried
 fi
-if test -n "$LIBNOTIFY_LIBS"; then
-    pkg_cv_LIBNOTIFY_LIBS="$LIBNOTIFY_LIBS"
- elif test -n "$PKG_CONFIG"; then
-    if test -n "$PKG_CONFIG" && \
+if test -n "$PKG_CONFIG"; then
+    if test -n "$LIBNOTIFY_LIBS"; then
+        pkg_cv_LIBNOTIFY_LIBS="$LIBNOTIFY_LIBS"
+    else
+        if test -n "$PKG_CONFIG" && \
     { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"libnotify >= 0.4.1\""; } >&5
   ($PKG_CONFIG --exists --print-errors "libnotify >= 0.4.1") 2>&5
   ac_status=$?
@@ -6294,15 +6287,14 @@ if test -n "$LIBNOTIFY_LIBS"; then
 else
   pkg_failed=yes
 fi
- else
-    pkg_failed=untried
+    fi
+else
+	pkg_failed=untried
 fi
 
 
 
 if test $pkg_failed = yes; then
-   	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
-$as_echo "no" >&6; }
 
 if $PKG_CONFIG --atleast-pkgconfig-version 0.20; then
         _pkg_short_errors_supported=yes
@@ -6310,17 +6302,17 @@ else
         _pkg_short_errors_supported=no
 fi
         if test $_pkg_short_errors_supported = yes; then
-	        LIBNOTIFY_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors "libnotify >= 0.4.1" 2>&1`
+	        LIBNOTIFY_PKG_ERRORS=`$PKG_CONFIG --short-errors --errors-to-stdout --print-errors "libnotify >= 0.4.1"`
         else
-	        LIBNOTIFY_PKG_ERRORS=`$PKG_CONFIG --print-errors "libnotify >= 0.4.1" 2>&1`
+	        LIBNOTIFY_PKG_ERRORS=`$PKG_CONFIG --errors-to-stdout --print-errors "libnotify >= 0.4.1"`
         fi
 	# Put the nasty error message in config.log where it belongs
 	echo "$LIBNOTIFY_PKG_ERRORS" >&5
 
-	HAVE_LIBNOTIFY="no"
-elif test $pkg_failed = untried; then
-     	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
 $as_echo "no" >&6; }
+                HAVE_LIBNOTIFY="no"
+elif test $pkg_failed = untried; then
 	HAVE_LIBNOTIFY="no"
 else
 	LIBNOTIFY_CFLAGS=$pkg_cv_LIBNOTIFY_CFLAGS
