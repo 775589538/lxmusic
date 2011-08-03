@@ -14,7 +14,7 @@ Depends: ${shlibs:Depends}, ${misc:Depends}, xmms2-core (>=0.6)
 Recommends: xmms2-plugin-alsa | xmms2-plugin-ao | xmms2-plugin-jack | xmms2-plugin-oss | xmms2-plugin-pulse ,
   xmms2-plugin-id3v2, xmms2-plugin-mad, xmms2-plugin-vorbis
 Suggests: xmms2-plugin-all
-Description: The minimalist music player for LXDE
+Description: Lightweight music player
  This is based on xmms2, which is lightweight and has server/client design.
  The user interface is quite simple, clean, and intuitive. At first glance,
  it looks similar to one of the famous players on Windows - foobar 2000.
